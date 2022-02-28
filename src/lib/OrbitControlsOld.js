@@ -1,5 +1,3 @@
-//TODO: Fix orbit controls 
-
 /**
  * @author qiao / https://github.com/qiao
  * @author mrdoob / http://mrdoob.com
@@ -8,14 +6,13 @@
  * @author erich666 / http://erichaines.com
  */
 
-import * as THREE from 'three';
-
 // This set of controls performs orbiting, dollying (zooming), and panning.
 // Unlike TrackballControls, it maintains the "up" direction object.up (+Y by default).
 //
 //    Orbit - left mouse / touch: one finger move
 //    Zoom - middle mouse, or mousewheel / touch: two finger spread or squish
 //    Pan - right mouse, or arrow keys / touch: three finter swipe
+if (!THREE.OrbitControl) {
     THREE.OrbitControls = function (object, domElement) {
 
         this.object = object;
@@ -998,3 +995,4 @@ import * as THREE from 'three';
         }
 
     });
+}
